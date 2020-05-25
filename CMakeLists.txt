@@ -10,7 +10,9 @@ set(CMAKE_CXX_FLAGS "${CMAXE_CXX_FLAGS} -Wall -pthread")
 set(sources
    main.cpp
    MovieTest.cpp
-   Movie.cpp)
+   RentalTest.cpp
+   Movie.cpp
+   Rental.cpp)
 add_executable(testVideoStoreRefactoring ${sources})
 target_link_libraries(testVideoStoreRefactoring pthread)
 target_link_libraries(testVideoStoreRefactoring gmock)
