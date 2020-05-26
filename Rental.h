@@ -5,6 +5,7 @@
 class Rental {
 public:
 Rental(const Movie &movie, int daysRented);
+double getCharge() const;
 int getDaysRented() const;
 const Movie& getMovie() const;
 
