@@ -15,6 +15,8 @@ private:
 std::string name;
 std::vector<Rental> rentals;
 double amountFor(const Rental& aRental) const;
+double getTotalAmount() const;
+double getTotalFrequentRenterPoints() const;
 };
 
 #endif //CUSTOMER_H
