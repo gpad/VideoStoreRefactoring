@@ -11,8 +11,10 @@ set(sources
    main.cpp
    MovieTest.cpp
    RentalTest.cpp
+   CustomerTest.cpp
    Movie.cpp
-   Rental.cpp)
+   Rental.cpp
+   Customer.cpp)
 add_executable(testVideoStoreRefactoring ${sources})
 target_link_libraries(testVideoStoreRefactoring pthread)
 target_link_libraries(testVideoStoreRefactoring gmock)
