@@ -8,6 +8,7 @@ Rental(const Movie &movie, int daysRented);
 double getCharge() const;
 int getDaysRented() const;
 const Movie& getMovie() const;
+int getFrequentRenterPoints() const;
 
 private:
 Movie movie;
