@@ -14,7 +14,7 @@ std::string statement();
 private:
 std::string name;
 std::vector<Rental> rentals;
-double amountFor(const Rental& each) const;
+double amountFor(const Rental& aRental) const;
 };
 
 #endif //CUSTOMER_H
