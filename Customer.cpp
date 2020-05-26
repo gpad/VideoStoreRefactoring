@@ -20,19 +20,15 @@ std::string Customer::statement() {
         result << "Rental Record for " << getName() << "\n";
 
         for (auto each: rentals) {
-                double thisAmount = 0;
-                thisAmount = each.getCharge();
-
                 //add frequent renter points
                 frequentRenterPoints++;
                 //add bonus for a 2 day new release rental
                 if((each.getMovie().getPriceCode() == Movie::NEW_RELEASE) &&
                    (each.getDaysRented() > 1)) frequentRenterPoints++;
 
-
                 //show figures for this rental
-                result << "\t" << each.getMovie().getTitle() << "\t" << thisAmount << "\n";
-                totalAmount += thisAmount;
+                result << "\t" << each.getMovie().getTitle() << "\t" << each.getCharge() << "\n";
+                totalAmount += each.getCharge();
         }
         //add footer lines
         result << "Amount owed is " << totalAmount << "\n";
