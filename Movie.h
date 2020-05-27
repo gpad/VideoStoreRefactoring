@@ -13,6 +13,7 @@ void setPriceCode(const int priceCode);
 int getPriceCode() const;
 std::string getTitle() const;
 double getCharge(int daysRented) const;
+int getFrequentRenterPoints(int daysRented) const;
 
 private:
 int priceCode;
