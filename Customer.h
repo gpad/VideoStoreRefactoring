@@ -10,6 +10,7 @@ explicit Customer(const std::string &name);
 std::string getName() const;
 void addRental(const Rental& rental);
 std::string statement();
+std::string htmlStatement();
 
 private:
 std::string name;

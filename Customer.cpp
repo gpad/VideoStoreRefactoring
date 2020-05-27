@@ -27,6 +27,23 @@ std::string Customer::statement() {
         return result.str();
 }
 
+std::string Customer::htmlStatement() {
+        std::ostringstream result;
+        result << "<H1>Rentals for <EM>" << getName() << "</EM></H1><P>" << "\n";
+
+        for (auto each: rentals) {
+                result << each.getMovie().getTitle() << ": " <<
+                        each.getCharge()  << "<BR>" << "\n";
+        }
+
+        //add footer lines
+        result << "<P>You owe <EM>" << getTotalAmount() << "</EM><P>" << "\n";
+        result << "On this rental you earned <EM>" <<
+                getTotalFrequentRenterPoints() << "</EM> frequent renter points<P>";
+
+        return result.str();
+}
+
 double Customer::getTotalAmount() const {
         double result = 0;
 
