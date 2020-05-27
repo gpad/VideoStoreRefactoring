@@ -14,7 +14,10 @@ set(sources
    CustomerTest.cpp
    Movie.cpp
    Rental.cpp
-   Customer.cpp)
+   Customer.cpp
+   NewReleasePrice.cpp
+   RegularPrice.cpp
+   ChildrensPrice.cpp)
 add_executable(testVideoStoreRefactoring ${sources})
 target_link_libraries(testVideoStoreRefactoring pthread)
 target_link_libraries(testVideoStoreRefactoring gmock)
