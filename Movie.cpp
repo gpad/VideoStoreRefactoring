@@ -36,8 +36,5 @@ double Movie::getCharge(int daysRented) const {
 }
 
 int Movie::getFrequentRenterPoints(int daysRented) const {
-        if((getPriceCode() == NEW_RELEASE) &&
-           (daysRented > 1)) return 2;
-
-        return 1;
+        return price->getFrequentRenterPoints(daysRented);
 }
