@@ -17,8 +17,7 @@ set(sources
    Customer.cpp
    NewReleasePrice.cpp
    RegularPrice.cpp
-   ChildrensPrice.cpp
-   Price.cpp)
+   ChildrensPrice.cpp)
 add_executable(testVideoStoreRefactoring ${sources})
 target_link_libraries(testVideoStoreRefactoring pthread)
 target_link_libraries(testVideoStoreRefactoring gmock)

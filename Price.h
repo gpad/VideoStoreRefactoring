@@ -5,7 +5,7 @@ class Price {
 public:
 virtual ~Price() = default;
 virtual int getPriceCode() const = 0;
-double getCharge(int daysRented) const;
+virtual double getCharge(int daysRented) const = 0;
 };
 
 #endif //PRICE_H
