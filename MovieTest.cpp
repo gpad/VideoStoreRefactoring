@@ -17,3 +17,12 @@ TEST(MovieGetTitle, ReturnsTheMovieTitle) {
         Movie movie("Toy Story", Movie::CHILDRENS);
         ASSERT_THAT(movie.getTitle(), Eq("Toy Story"));
 }
+
+TEST(ExceptionTest, ExpectThrowsSpecificException) {
+        try {
+                Movie movie("Toy Story", 4);
+                FAIL() << "Should throw an exception\n";
+        } catch (std::invalid_argument& err) {
+                EXPECT_THAT(std::string(err.what()), Eq("Incorrect Price Code"));
+        }
+}
