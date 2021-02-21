@@ -2,17 +2,22 @@
 #include "RegularPrice.h"
 #include "ChildrensPrice.h"
 #include "NewReleasePrice.h"
+#include <stdexcept>
 
-Movie::Movie(const std::string &title, const int priceCode) : title(title) {
+Movie::Movie(const std::string &title, const int priceCode) : title(title)
+{
         setPriceCode(priceCode);
 }
 
-int Movie::getPriceCode() const {
+int Movie::getPriceCode() const
+{
         return price->getPriceCode();
 }
 
-void Movie::setPriceCode(const int priceCode) {
-        switch(priceCode) {
+void Movie::setPriceCode(const int priceCode)
+{
+        switch (priceCode)
+        {
         case REGULAR:
                 price = new RegularPrice;
                 break;
@@ -27,14 +32,17 @@ void Movie::setPriceCode(const int priceCode) {
         }
 }
 
-std::string Movie::getTitle() const {
+std::string Movie::getTitle() const
+{
         return title;
 }
 
-double Movie::getCharge(int daysRented) const {
+double Movie::getCharge(int daysRented) const
+{
         return price->getCharge(daysRented);
 }
 
-int Movie::getFrequentRenterPoints(int daysRented) const {
+int Movie::getFrequentRenterPoints(int daysRented) const
+{
         return price->getFrequentRenterPoints(daysRented);
 }
